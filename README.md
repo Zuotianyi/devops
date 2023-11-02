@@ -1,2 +1,2 @@
 # devops
-for Jenkins practive
+for Jenkins practice
