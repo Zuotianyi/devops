@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'M3'
-        jdk 'jdk21'
+        jdk 'jdk17'
     }
     environment {
         SONARQUBE_TOKEN = credentials('sonarqube-token')
