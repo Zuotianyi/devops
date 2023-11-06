@@ -2,12 +2,10 @@ pipeline {
     agent any
     tools {
         maven 'M3'
-        jdk 'jdk17'
     }
     environment {
         SONARQUBE_TOKEN = credentials('sonarqube-token')
         CREDENTIALS = credentials('jenkins-credentials-id')
-        JAVA_HOME = "${tool 'jdk17'}"
     }
     stages {
         stage('Checkout') {
