@@ -1,11 +1,12 @@
 pipeline {
     agent any
     tools {
-        maven 'M3'
         jdk 'jdk17'
+        maven 'M3'
     }
     environment {
         SONARQUBE_TOKEN = credentials('sonarqube-token')
+        JAVA_HOME = "${tool 'JDK11'}"
     }
     stages {
         stage('Checkout') {
