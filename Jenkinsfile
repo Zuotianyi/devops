@@ -36,7 +36,7 @@ pipeline {
         }
         stage('Execute Jar') {
             steps {
-                sh 'java -jar target/petclinic.jar'
+                sh 'nohup java -jar  spring-petclinic-3.1.0-SNAPSHOT.jar --server.port=8081 &'
             }
         }
     }
