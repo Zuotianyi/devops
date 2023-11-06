@@ -50,7 +50,7 @@ pipeline {
         stage('Execute Jar') {
             steps {
                 // Execute the Spring Boot application on port 8081
-                sh 'nohup java -jar spring-petclinic-3.1.0-SNAPSHOT.jar --server.port=8081 --server.address=0.0.0.0 --server.address=0.0.0.0 &'
+                sh 'nohup java -jar spring-petclinic-3.1.0-SNAPSHOT.jar --server.port=8081 --server.address=0.0.0.0 &'
             }
         }
     }
