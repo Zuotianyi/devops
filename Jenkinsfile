@@ -40,14 +40,13 @@ pipeline {
                     // Define the artifact URL
                     // http://localhost:8080/job/petclinic_viz/4/artifact/target/spring-petclinic-3.1.0-SNAPSHOT.jar
                     def artifactUrl = "http://192.168.1.159:8080/job/petclinic_viz/lastSuccessfulBuild/artifact/target/spring-petclinic-3.1.0-SNAPSHOT.jar"
-                    // Use the 'curl' command to download the artifact
                     sh "curl -o spring-petclinic-3.1.0-SNAPSHOT.jar ${artifactUrl}"
                 }
             }
         }
         stage('Execute Jar') {
             steps {
-                sh 'nohup java -jar spring-petclinic-3.1.0-SNAPSHOT.jar --server.port=8081 &'
+                sh 'java -jar spring-petclinic-3.1.0-SNAPSHOT.jar --server.port=8081'
             }
         }
     }
