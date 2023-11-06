@@ -34,5 +34,10 @@ pipeline {
                 }
             }
         }
+        stage('Execute Jar') {
+            steps {
+                sh 'java -jar target/petclinic.jar'
+            }
+        }
     }
 }
