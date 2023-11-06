@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         SONARQUBE_TOKEN = credentials('sonarqube-token')
-        JAVA_HOME = "${tool 'JDK11'}"
+        JAVA_HOME = "${tool 'jdk17'}"
     }
     stages {
         stage('Checkout') {
