@@ -30,6 +30,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 // Perform SonarQube analysis
+                // Manually configure Sonarqube Server as 'sonarqube' at Jenkins dashboard
                 withSonarQubeEnv('sonarqube') {
                     sh 'mvn sonar:sonar -Dsonar.projectKey=petclinic -Dsonar.login=$SONARQUBE_TOKEN'
                 }
