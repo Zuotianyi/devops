@@ -10,7 +10,7 @@
 <br>
 <br>
 
-2. Manually generate Jenkins API token through dashboard and update it in jenkins_config.sh. Then run the following command to setup Jenkins and Snoarqube
+2. Manually generate Jenkins API token through the Jenkins dashboard at loclahost:8080 and update it in jenkins_config.sh. Then run the following command to configure Jenkins and Snoarqube.
 
 ```sh
    chmod +x jenkins_config.sh && ./jenkins_config.sh
