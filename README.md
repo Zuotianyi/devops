@@ -32,7 +32,7 @@ Navigate to **Administration > Security > Global Permissions** and configure the
 <br>
 <br>
 
-4. Login to Jenkins dashboard with username: admin and the initial Jenkins password. Navigate to **add new items** to create project petclinic_viz and select *Freestyle project*. Configure as below using Git as SCM.
+4. Login to Jenkins dashboard with username: admin and the initial Jenkins password. Configure Sonarqube Server 'sonarqube' in **System** and Sonarqube Scanner in **tool**. Navigate to **add new items** to create project petclinic_viz and select *Freestyle project*. Configure as below using Git as SCM.
 <img width="1026" alt="Screenshot 2023-11-07 at 9 41 52 PM" src="https://github.com/Zuotianyi/devops/assets/55261595/7468c975-2ae4-4bc6-8d64-760460743e18">
 <br>
 <br>
