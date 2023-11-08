@@ -10,7 +10,7 @@
 <br>
 <br>
 
-2. Run the following command to setup Jenkins and Snoarqube
+2. Manually generate Jenkins API token through dashboard and update it in jenkins_config.sh. Then run the following command to setup Jenkins and Snoarqube
 
 ```sh
    chmod +x jenkins_config.sh && ./jenkins_config.sh
