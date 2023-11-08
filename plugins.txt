@@ -1,0 +1,8 @@
+blueocean:latest
+sonar:latest
+git:latest
+github-branch-source:latest
+pipeline-stage-view:latest
+workflow-aggregator:latest
+job-dsl:latest
+configuration-as-code:latest
