@@ -98,7 +98,6 @@ setup_environment_vars
 create_sonarqube_password
 create_sonarqube_user_token
 create_jenkins_sonar_credential
-create_jenkins_sonar_credential
 create_jenkins_username_password_credential
 echo "Create Petclinic project on Sonarqube"
 create_petclinic_project_sq
