@@ -1,0 +1,7 @@
+1. How CI (Jenkins) Plugins Help Improve DevOps Practices:
+Jenkins plugins extend the functionality of Jenkins. Plugins automate tasks such as code compilation, testing, and deployment, reducing the need for manual intervention and speeding up the development cycle. Also, they help create shorter feedback loops by providing immediate insights into build and test results, allowing teams to address issues promptly.
+
+2. Alternatives to Jenkins Plugins for Configuring CI Steps:
+In the absence of plugins, following ways can be used to configure and add steps into a CI pipeline:
+APIs: Jenkins itself has a robust API for job creation and management. We can use API token to make request to Jenkins.
+Manual Steps: Though contrary to DevOps principles, certain steps can be performed manually if automation is not achievable. We could operate through Jenkins dashboard directly if necessary.
