@@ -9,7 +9,7 @@ setup_environment_vars() {
   export JENKINS_URL="http://localhost:8080"
   export JENKINS_USERNAME="admin"
   export SONARQUBE_INSTANCE_NAME="sonarqube"
-  export JOB_NAME="PetClinicBuild"
+  export JOB_NAME="petclinic_viz"
 }
 
 # Initialize Sonarqube password/remove forced authentication/set permission to anyone
