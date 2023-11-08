@@ -23,7 +23,9 @@ After execution, there should be a Jenkins API token, two Jenkins credentials, a
 <br>
 <br>
 <br>
-3. Login to Sonarqube dashboard at localhost:9000 with username:admin and password:password. Navigate to **Administration > Security > Global Permissions** and configure the permissions as below for Jetkins pipeline.
+
+3. Login to Sonarqube dashboard at localhost:9000 with username:admin and password:password. 
+Navigate to **Administration > Security > Global Permissions** and configure the permissions as below for Jenkins pipeline.
 <img width="1425" alt="Screenshot 2023-11-07 at 9 17 43 PM" src="https://github.com/Zuotianyi/devops/assets/55261595/0441ae03-6f03-49e2-a962-c14ef4c9a9fd">
 
 <br>
