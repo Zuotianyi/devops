@@ -3,6 +3,7 @@ setup_environment_vars() {
   echo "Setting up environment variables..."
   export JENKINS_CONTAINER_NAME="jenkins-blue-sonar"
   export JENKINS_PASSWORD=$(docker exec "$JENKINS_CONTAINER_NAME" cat /var/jenkins_home/secrets/initialAdminPassword)
+  export JENKINS_TOKEN="UpateHereTheRealToken" #replace the Jenkins generated API token here
   export SONARQUBE_URL="http://localhost:9000"
   export SONARQUBE_USERNAME="admin"
   export SONARQUBE_PASSWORD="password"
@@ -30,18 +31,18 @@ create_sonarqube_user_token() {
 }
 
 # Create Jenkins API tokens
-create_jenkins_api_token () {
-  echo "Creating Jenkins API token..."
-  JENKINS_CRUMB=$(curl -s "$JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)" -u "$JENKINS_USERNAME:$JENKINS_PASSWORD")
-  response=$(curl -s -X POST -u "$JENKINS_USERNAME:$JENKINS_PASSWORD" \
-    -H "$JENKINS_CRUMB" \
-    "$JENKINS_URL/user/$JENKINS_USERNAME/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken" \
-    --data-urlencode "newTokenName=ScriptToken" \
-    --data-urlencode "newTokenDescription=API Token for scripts" \
-    --data-urlencode "newTokenTTL=365")
-  JENKINS_TOKEN=$(echo "$response" | jq -r '.data.tokenValue')
-  echo "Jenkins API token created: $JENKINS_TOKEN"
-}
+# create_jenkins_api_token () {
+#   echo "Creating Jenkins API token..."
+#   JENKINS_CRUMB=$(curl -s "$JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)" -u "$JENKINS_USERNAME:$JENKINS_PASSWORD")
+#   response=$(curl -s -X POST -u "$JENKINS_USERNAME:$JENKINS_PASSWORD" \
+#     -H "$JENKINS_CRUMB" \
+#     "$JENKINS_URL/user/$JENKINS_USERNAME/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken" \
+#     --data-urlencode "newTokenName=ScriptToken" \
+#     --data-urlencode "newTokenDescription=API Token for scripts" \
+#     --data-urlencode "newTokenTTL=365")
+#   JENKINS_TOKEN=$(echo "$response" | jq -r '.data.tokenValue')
+#   echo "Jenkins API token created: $JENKINS_TOKEN"
+# }
 
 # Create Jenkins secret text credential for sonarqube plugin
 create_jenkins_sonar_credential () {
