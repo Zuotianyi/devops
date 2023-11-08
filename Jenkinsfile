@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     // Define the artifact URL
-                    def artifactUrl = "http://host.docker.internal:8080/job/petclinic_viz/1/artifact/target/spring-petclinic-3.1.0-SNAPSHOT.jar"
+                    def artifactUrl = "http://localhost:8080/job/petclinic_viz/4/artifact/target/spring-petclinic-3.1.0-SNAPSHOT.jar"
                     // Use curl with Jenkins credentials to download the artifact
                     withCredentials([usernamePassword(credentialsId: 'jenkins-credentials-id', usernameVariable: 'JENKINS_USER', passwordVariable: 'JENKINS_PASSWORD')]) {
                         sh "curl -u $JENKINS_USER:$JENKINS_PASSWORD -o spring-petclinic-3.1.0-SNAPSHOT.jar ${artifactUrl}"
