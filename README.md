@@ -20,7 +20,6 @@ After execution, there should be a Jenkins API token, two Jenkins credentials, a
 <img width="1429" alt="Screenshot 2023-11-07 at 10 07 19 PM" src="https://github.com/Zuotianyi/devops/assets/55261595/76ba0382-96c5-44b8-9bd9-9fe5c8d6b49b">
 <img width="1439" alt="Screenshot 2023-11-07 at 10 06 53 PM" src="https://github.com/Zuotianyi/devops/assets/55261595/8a8d626d-3e95-4062-939c-08f50f58dbcf">
 <img width="1203" alt="Screenshot 2023-11-07 at 10 05 52 PM" src="https://github.com/Zuotianyi/devops/assets/55261595/9cd46cb3-e828-4015-bed1-d61b8090cb54">
-
 <br>
 <br>
 <br>
