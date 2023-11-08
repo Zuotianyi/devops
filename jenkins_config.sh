@@ -43,7 +43,7 @@ create_jenkins_api_token () {
   echo "Jenkins API token created: $JENKINS_TOKEN"
 }
 
-# create Jenkins secret text credential for sonarqube plugin
+# Create Jenkins secret text credential for sonarqube plugin
 create_jenkins_sonar_credential () {
   echo "create credential for sonarqube plugin"
   local credential_id="sonarqube-token"
@@ -63,7 +63,7 @@ create_jenkins_sonar_credential () {
   }"
 }
 
-# create Jenkins credentials for downloading jar file
+# Create Jenkins credentials for downloading jar file
 create_jenkins_username_password_credential () {
   echo "Creating Jenkins credentials id..."
   local credential_id="jenkins-credentials-id"
@@ -84,7 +84,7 @@ create_jenkins_username_password_credential () {
 }
 
 
-# Function to create Petclinic project in Sonarqube
+# Create Petclinic project in Sonarqube
 create_petclinic_project_sq() {
   curl -s -u "$SONARQUBE_USERNAME:$SONARQUBE_PASSWORD" -o /dev/null -X POST "http://localhost:9000/api/projects/create" \
     -d "project"="petclinic" \
